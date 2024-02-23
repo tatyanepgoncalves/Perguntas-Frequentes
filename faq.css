@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --rosa: hsl(275, 100%, 97%);
+  --roxo-claro: hsl(292, 16%, 49%);
+  --roxo-escuro: hsl(292, 42%, 14%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--rosa);
+  font-family: "Work Sans", sans-serif;
+  background-image: url("images/background-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+body img, body svg {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  background-color: #fff;
+  max-width: 800px;
+  padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 1rem;
+}
+.container .faq-headline {
+  display: flex;
+  gap: 20px;
+}
+.container .faq-headline h1 {
+  font-weight: 700;
+  font-size: 40px;
+}
+.container #border {
+  border-bottom: 1px solid var(--rosa);
+}
+.container .accordion-items .accordion-btn {
+  cursor: pointer;
+  background-color: transparent;
+  width: 100%;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  gap: 10px;
+  border: none;
+}
+.container .accordion-items .accordion-btn .icons img {
+  min-width: 30px;
+}
+.container .accordion-items .accordion-btn .icons .minus-icon {
+  display: none;
+}
+.container .accordion-items .accordion-btn:hover {
+  color: rgb(175, 6, 175);
+}
+.container .accordion-items .accordion-description {
+  background-color: #fff;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 200ms ease;
+}
+.container .accordion-items .accordion-description p {
+  color: var(--roxo-claro);
+  padding: 15px 0;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.attribution .break {
+  display: none;
+}
+.attribution a {
+  color: rgb(175, 6, 175);
+}
+.attribution a:hover {
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  body {
+    background-image: url("images/background-pattern-mobile.svg");
+  }
+  .faq-headline {
+    gap: 12px;
+    padding-bottom: 10px;
+  }
+  .faq-headline h1 {
+    font-size: 25px;
+  }
+  button {
+    font-size: 15px;
+  }
+  .attribution {
+    bottom: 20px;
+    font-size: 18px;
+  }
+  .attribution .break {
+    display: block;
+  }
+}/*# sourceMappingURL=faq.css.map */
